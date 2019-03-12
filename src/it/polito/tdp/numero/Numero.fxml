@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="it.polito.tdp.numero.NumeroController">
+   <top>
+      <Label text="Indovina il numero" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="boxControlloPartita">
+               <children>
+                  <Label text="Partita" />
+                  <Button mnemonicParsing="false" onAction="#handleNuova" text="nuova" />
+                  <Label text="Rimasti">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtRimasti" editable="false" />
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </opaqueInsets>
+            </HBox>
+            <HBox fx:id="boxControlloTentativo">
+               <children>
+                  <Label text="Tentativo" />
+                  <TextField fx:id="txtTentativo" />
+                  <Button mnemonicParsing="false" onAction="#handleProvaTentativo" text="Prova" />
+               </children>
+            </HBox>
+            <TextArea fx:id="txtMessaggi" editable="false" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
